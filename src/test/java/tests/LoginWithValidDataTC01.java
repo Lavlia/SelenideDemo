@@ -12,8 +12,8 @@ public class LoginWithValidDataTC01 extends BaseTest {
     @Test
     public void loginWithValidData() {
         HRMHomePage hrmHomePage = open(Utils.URL, HRMHomePage.class);
-        HRMAccountPage hrmAccountPage = hrmHomePage.login("Admin", "admin123");
-        hrmAccountPage.logout();
+        HRMAccountPage hrmAccountPage = hrmHomePage.loginValidAdmin("Admin", "admin123");
+        hrmAccountPage.logout("Welcome Admin");
     }
 
 }

@@ -15,7 +15,14 @@ public class HRMHomePage {
     private SelenideElement loginButton;
 
 
-    public HRMAccountPage login(String username,String password){
+    public HRMAccountPage loginValidAdmin(String username, String password) {
+        usernameTextBox.shouldBe(Condition.visible).setValue(username);
+        passwordTextBox.shouldBe(Condition.visible).setValue(password);
+        loginButton.shouldBe(Condition.visible).click();
+        return page(HRMAccountPage.class);
+    }
+
+    public HRMAccountPage loginValidUser(String username, String password) {
         usernameTextBox.shouldBe(Condition.visible).setValue(username);
         passwordTextBox.shouldBe(Condition.visible).setValue(password);
         loginButton.shouldBe(Condition.visible).click();

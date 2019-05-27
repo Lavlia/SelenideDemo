@@ -7,11 +7,12 @@ import pageObjects.Utils;
 
 import static com.codeborne.selenide.Selenide.open;
 
-public class AddEmployeeWithValidDataTC03 {
+public class LoginValidUserTC04 extends BaseTest {
     @Test
-    public void addEmployeeWithValidData() {
+    public void loginValidUser() {
         HRMHomePage hrmHomePage = open(Utils.URL, HRMHomePage.class);
-        HRMAccountPage hrmAccountPage = hrmHomePage.loginValidAdmin("Admin", "admin123");
-        hrmAccountPage.addEmployee("AprilS", "MayS", "SpringS", "AprilMayS", "SSdd00AA00");
+        HRMAccountPage hrmAccountPage = hrmHomePage.loginValidAdmin("AprilMay", "SSdd00AA00");
+        hrmAccountPage.logout("Welcome April");
     }
+
 }
