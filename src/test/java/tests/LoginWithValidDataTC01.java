@@ -10,9 +10,9 @@ import static com.codeborne.selenide.Selenide.*;
 public class LoginWithValidDataTC01 extends BaseTest {
 
     @Test
-    public void loginWithValidData() {
+    public void loginValidAdmin() {
         HRMHomePage hrmHomePage = open(Utils.URL, HRMHomePage.class);
-        HRMAccountPage hrmAccountPage = hrmHomePage.loginValidAdmin("Admin", "admin123");
+        HRMAccountPage hrmAccountPage = hrmHomePage.login("Admin", "admin123");
         hrmAccountPage.logout("Welcome Admin");
     }
 

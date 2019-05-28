@@ -11,7 +11,7 @@ public class AddEmployeeWithValidDataTC03 {
     @Test
     public void addEmployeeWithValidData() {
         HRMHomePage hrmHomePage = open(Utils.URL, HRMHomePage.class);
-        HRMAccountPage hrmAccountPage = hrmHomePage.loginValidAdmin("Admin", "admin123");
+        HRMAccountPage hrmAccountPage = hrmHomePage.login("Admin", "admin123");
         hrmAccountPage.addEmployee("AprilS", "MayS", "SpringS", "AprilMayS", "SSdd00AA00");
     }
 }

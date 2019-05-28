@@ -11,7 +11,7 @@ public class LoginValidUserTC04 extends BaseTest {
     @Test
     public void loginValidUser() {
         HRMHomePage hrmHomePage = open(Utils.URL, HRMHomePage.class);
-        HRMAccountPage hrmAccountPage = hrmHomePage.loginValidAdmin("AprilMay", "SSdd00AA00");
+        HRMAccountPage hrmAccountPage = hrmHomePage.login("AprilMay", "SSdd00AA00");
         hrmAccountPage.logout("Welcome April");
     }
 
